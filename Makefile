@@ -1,11 +1,11 @@
 # Makefile for swot
 
 # Where cfitsio library is installed
-CFITSIO =  # /usr
+CFITSIO =  /softs/cfitsio/3.450
 
 
 # Where GSL library is installed
-GSL =  #/usr/local
+GSL =  /softs/gsl/2.5
 
 # Where MPI is installed
 MPI = #/opt/openmpi-1.8.6_clang
