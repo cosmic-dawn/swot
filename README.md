@@ -72,9 +72,9 @@ module load swot
 ```
 and then run it as any other command.
 
-### VENICE
+### VENICE complementary software
 
-`venice` is a companion software to draw random points out of DS9 or fits masks. See https://github.com/jcoupon/venice.
+The companion software `venice` (https://github.com/jcoupon/venice) can be used to draw random points out of DS9 or fits masks. We have our forked version at https://github.com/cosmic-dawn/venice. 
 
 ## Usage
 
