@@ -2,15 +2,15 @@
 # ---------------------------------------------------------- #
 # Input catalogues                                           #
 # ---------------------------------------------------------- #
-data1          /n07data/davidzon/COSMOS2015_Laigle+_v1.1.fits[FLAG_PETER==0&&FLAG_HJMCC==0&&FLAG_COSMOS==1&&ZPDF>0.5&&ZPDF<1.&&MASS_MED>10.8&&MASS_MED<11.]  # input data catalogue #1
+data1          /n07data/COSMOS2015/COSMOS2015_Laigle+_v1.1.fits[FLAG_PETER==0&&FLAG_HJMCC==0&&FLAG_COSMOS==1&&ZPDF>0.5&&ZPDF<1.&&MASS_MED>10.8&&MASS_MED<11.]  # input data catalogue #1
 cols1          ALPHA_J2000,DELTA_J2000	  # Column ids for data
-data2          /n07data/davidzon/COSMOS2015_Laigle+_v1.1.fits[FLAG_PETER==0&&FLAG_HJMCC==0&&FLAG_COSMOS==1]  # input data catalogue #2
+data2          .fits # input data catalogue #2
 cols2          	ALPHA_J2000,DELTA_J2000	  # Column ids for data2
 ran1           /n07data/davidzon/random_test1.fits	  # input random catalogue #
 rancols1       	x,y  # Column ids for ran1
-ran2           /n07data/davidzon/random_test2.fits	  # input random catalogue #2
+ran2           .fits	  # input random catalogue #2
 rancols2       x,y	  # Column ids for ran2
-fits           auto	  # input files in fits format? [auto,yes,no(ascii)].
+fits           yes	  # input files in fits format? [auto,yes,no(ascii)].
 # ---------------------------------------------------------- #
 # Correlation options                                        #
 # ---------------------------------------------------------- #
@@ -30,7 +30,7 @@ seed           time	 # random seed for bootstrap
 OA             0.05	 # Open angle for approximation (value or "no") 
 calib          no	 # Calibration factor [yes,no] (for lensing). Replace e1 by 1+m or c.
 RR_in          no	 # file for pre-computed RR pairs (only for clustering) 
-RR_out         no	 # file for saving RR pairs (only for clustering) 
+RR_out        rr_out	 # file for saving RR pairs (only for clustering) 
 # ---------------------------------------------------------- #
 # Cosmology (for gal-gal correlations, w(R) and xi(rp,PI))   #
 # ---------------------------------------------------------- #
