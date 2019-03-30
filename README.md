@@ -40,31 +40,37 @@ $ ./configure --prefix=YOUR/PATH CC=icc CXX=icpc
 
 To download and install GSL, please visit http://www.gnu.org/software/gsl/.
 
-
 To download and install CFITSIO, please visit http://heasarc.gsfc.nasa.gov/docs/software/fitsio/fitsio.html.
 
 ### CANDIDE dependencies
 
-To run `SWOT` on CANDIDE you need to load the following modules
+To run `SWOT` on CANDIDE you first have to load the following modules
 ```sh
 module load gsl/2.5 cfitsio/3.450
 ```
 Your $LD_LIBRARY_PATH should include `/softs/openmpi/4.0.1-torque-CentOS7/lib:/softs/cfitsio/3.450/lib:/softs/gsl/2.5/lib`
 Also ensure that openmpi/4.0.0 (or later) is loaded in order to use `mpirun`.
 
-### SWOT
+### Install SWOT on CANDIDE
 
-1. Download the latest version here https://github.com/jcoupon/swot/releases/latest
-2. Untar the archive and change directory to `swot-X.Y.Z`
-3. Run `Make`
-4. A test suite is available [here](https://drive.google.com/file/d/0By_5Nt3bfOudaFlSUFdaYWFaUjA/view?usp=sharing).
+If you are system manager or you want your local version of `SWOT`:
+
+1. Download/clone the latest version here https://github.com/cosmic-dawn/swot/
+2. Enter in the directory `swot`
+3. Verify that in the Makefile paths to GSL and CFITSIO coincide with the modules preiously loaded
+3. Run `make`
+4. A test example is available in a dedicated folder, follow the instruction in `test/README.md` (it is just a sanity check, no scientific relevance).
 
 If OPEN MPI or GSL are installed in a different directory than `/usr/local`, edit the `Makefile` and set the `MPI` or `GSL` variable accordingly, or run:
 ```shell
 $ make GSL=path/to/gsl MPI=path/to/mpi
 ```
 
-The binary file is installed in swot-X.Y.Z/bin. Simply update your `PATH` variable or move `swot` to your working directory.
+If you want to use the version of `SWOT` installed by the system manager, you just need to
+```
+module load swot
+```
+and then run it as any other command.
 
 ### VENICE
 
@@ -76,7 +82,6 @@ Run the software:
 ```shell
 $ mpirun -np [Ncpu] swot -c configFile -corr ESTIMATOR [options]:
 ```
-See **test/README.md** to run an example (just a sanity check, no scientific relevance).
 
 Display the default configuration file:
 ```shell
