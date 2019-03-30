@@ -43,6 +43,15 @@ To download and install GSL, please visit http://www.gnu.org/software/gsl/.
 
 To download and install CFITSIO, please visit http://heasarc.gsfc.nasa.gov/docs/software/fitsio/fitsio.html.
 
+### CANDIDE dependencies
+
+To run `SWOT` on CANDIDE you need to load the following modules
+```sh
+module load gsl/2.5 cfitsio/3.450
+```
+Your $LD_LIBRARY_PATH should include `/softs/openmpi/4.0.1-torque-CentOS7/lib:/softs/cfitsio/3.450/lib:/softs/gsl/2.5/lib`
+Also ensure that openmpi/4.0.0 (or later) is loaded in order to use `mpirun`.
+
 ### SWOT
 
 1. Download the latest version here https://github.com/jcoupon/swot/releases/latest
@@ -67,6 +76,7 @@ Run the software:
 ```shell
 $ mpirun -np [Ncpu] swot -c configFile -corr ESTIMATOR [options]:
 ```
+See **test/README.md** to run an example (just a sanity check, no scientific relevance).
 
 Display the default configuration file:
 ```shell
