@@ -27,6 +27,6 @@ xxd test/test1_rr_out > new.hex
 diff old.hex new.hex
 ```
 
-`test1_acf.out` is an ASCII table and can be directly compared with 
-the `diff` command.
+while `test1_acf.out` is an ASCII table and can be directly compared 
+with the `diff` command.
 
