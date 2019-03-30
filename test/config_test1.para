@@ -30,7 +30,7 @@ seed           time	 # random seed for bootstrap
 OA             0.05	 # Open angle for approximation (value or "no") 
 calib          no	 # Calibration factor [yes,no] (for lensing). Replace e1 by 1+m or c.
 RR_in          no	 # file for pre-computed RR pairs (only for clustering) 
-RR_out        rr_out	 # file for saving RR pairs (only for clustering) 
+RR_out        test/test1_rr_out	 # file for saving RR pairs (only for clustering) 
 # ---------------------------------------------------------- #
 # Cosmology (for gal-gal correlations, w(R) and xi(rp,PI))   #
 # ---------------------------------------------------------- #
@@ -45,7 +45,7 @@ pi_max         40	 # For wp: limit for pi integration
 proj           theta	 # Axis projection [theta, como, phys]
                     	 # for auto, cross: default: theta (deg)
                     	 # for auto_[3d,wp], cross_[3d,wp], gglens: default: como (Mpc)
-out            corr.out	 # Output file in ascii format
+out            test/test1_acf.out	 # Output file in ascii format
 cov            no	 # Covariance matrix of errors [yes,no] (in "out".cov)
 xi             no	 # xi(rp, pi) for auto_wp [yes,no] (in "out".xi)
 printTree      no	 # Output tree in "out".data[1,2]_tree.[ascii,fits]
