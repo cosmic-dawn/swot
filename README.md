@@ -53,7 +53,7 @@ Also ensure that openmpi/4.0.0 (or later) is loaded in order to use `mpirun`.
 
 ### Install SWOT on CANDIDE
 
-If you are system manager or you want your local version of `SWOT`:
+If you are system manager or you want a local version of `SWOT`:
 
 1. Download/clone the latest version here https://github.com/cosmic-dawn/swot/
 2. Enter in the directory `swot`
