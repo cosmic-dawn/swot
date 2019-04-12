@@ -61,9 +61,9 @@ If you are system manager or you want a local version of `SWOT`:
 3. Run `make`
 4. A test example is available in a dedicated folder, follow the instruction in `test/README.md` (it is just a sanity check, no scientific relevance).
 
-If OPEN MPI or GSL are installed in a different directory than `/usr/local`, edit the `Makefile` and set the `MPI` or `GSL` variable accordingly, or run:
+If OPEN MPI, CFITSIO, or GSL are installed in a different directory than `/usr/local`, edit the `Makefile` and set the `MPI`, `GSL`, or `GSL` variable accordingly. You can also run:
 ```shell
-$ make GSL=path/to/gsl MPI=path/to/mpi
+$ make GSL=path/to/gsl MPI=path/to/mpi CFITSIO=path/to/cfitsio
 ```
 
 If you want to use the version of `SWOT` installed by the system manager, you just need to
