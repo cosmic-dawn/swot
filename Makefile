@@ -1,14 +1,14 @@
 # Makefile for swot
 
 # Where cfitsio library is installed
-CFITSIO =  /softs/cfitsio/3.450
+#CFITSIO =  /path/to/cfitsio
 
 
 # Where GSL library is installed
-GSL =  /softs/gsl/2.5
+#GSL =  /path/to/gsl
 
 # Where MPI is installed
-MPI = #/opt/openmpi-1.8.6_clang
+#MPI = path/to/openmpi
 
 # compiler options
 ifneq ($(MPI), )
