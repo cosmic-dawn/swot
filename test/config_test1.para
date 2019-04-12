@@ -2,11 +2,11 @@
 # ---------------------------------------------------------- #
 # Input catalogues                                           #
 # ---------------------------------------------------------- #
-data1          test/cosmos2015_test1_z05-1.fits[FLAG_PETER==0&&FLAG_HJMCC==0&&FLAG_COSMOS==1&&ZPDF>0.5&&ZPDF<1.&&MASS_MED>10.8&&MASS_MED<11.]  # input data catalogue #1
+data1          cosmos2015_test1_z05-1.fits[FLAG_PETER==0&&FLAG_HJMCC==0&&FLAG_COSMOS==1&&ZPDF>0.5&&ZPDF<1.&&MASS_MED>10.8&&MASS_MED<11.]  # input data catalogue #1
 cols1          ALPHA_J2000,DELTA_J2000	  # Column ids for data
 data2          .fits # input data catalogue #2
 cols2          	ALPHA_J2000,DELTA_J2000	  # Column ids for data2
-ran1           test/random_test1.fits	  # input random catalogue #
+ran1           random_test1.fits	  # input random catalogue #
 rancols1       	x,y  # Column ids for ran1
 ran2           .fits	  # input random catalogue #2
 rancols2       x,y	  # Column ids for ran2
@@ -30,7 +30,7 @@ seed           time	 # random seed for bootstrap
 OA             0.05	 # Open angle for approximation (value or "no") 
 calib          no	 # Calibration factor [yes,no] (for lensing). Replace e1 by 1+m or c.
 RR_in          no	 # file for pre-computed RR pairs (only for clustering) 
-RR_out        test/test1_rr_out	 # file for saving RR pairs (only for clustering) 
+RR_out        test1_rr_out	 # file for saving RR pairs (only for clustering) 
 # ---------------------------------------------------------- #
 # Cosmology (for gal-gal correlations, w(R) and xi(rp,PI))   #
 # ---------------------------------------------------------- #
@@ -45,7 +45,7 @@ pi_max         40	 # For wp: limit for pi integration
 proj           theta	 # Axis projection [theta, como, phys]
                     	 # for auto, cross: default: theta (deg)
                     	 # for auto_[3d,wp], cross_[3d,wp], gglens: default: como (Mpc)
-out            test/test1_acf.out	 # Output file in ascii format
+out            test1_acf.out	 # Output file in ascii format
 cov            no	 # Covariance matrix of errors [yes,no] (in "out".cov)
 xi             no	 # xi(rp, pi) for auto_wp [yes,no] (in "out".xi)
 printTree      no	 # Output tree in "out".data[1,2]_tree.[ascii,fits]

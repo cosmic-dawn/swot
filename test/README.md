@@ -12,8 +12,8 @@ This folder include
 To run this test:
 
 ```bash
-cd swot/
-mpirun -np 8 bin/swot -c test/config_test1.para
+cd swot/test
+mpirun -np 8 ../bin/swot -c config_test1.para
 ```
  
 The results are stored in the file `test/test1_acf.out` and 
